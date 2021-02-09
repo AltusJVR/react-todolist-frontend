@@ -1,11 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
-
+// Utilities
 .container {
   display: flex;
   flex-direction: column;
@@ -17,7 +18,7 @@
 .input-container {
   margin: 2rem auto;
   padding: 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, .5);
   border-radius: 5px;
 }
 
@@ -29,24 +30,27 @@
   font-weight: 600;
 }
 
-#todo-submit {
+#todo-submit{
   height: 1.5rem;
   cursor: pointer;
-  padding: 0 0.5rem;
-}
-#todo-submit:focus {
-  outline: none;
-  border: 2px solid rgba(0, 0, 0, 0.5);
-  border-radius: 2px;
+  padding: 0 .5rem;
+  &:focus {
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, .5);
+    border-radius: 2px;
+  }
 }
 
 .completed {
   color: rgba(2, 140, 2, 0.453);
+ 
+}
+.unfinished {
+  color: rgba(155, 0, 0, .8);
+  
 }
 
-.unfinished {
-  color: rgba(155, 0, 0, 0.8);
-}
+// Todos Styling
 
 #todos {
   width: 50%;
@@ -54,24 +58,24 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-}
-#todos .todo {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 600;
-  padding: 1rem 0.5rem;
-  margin: 0.5rem 0.1rem;
-  border-radius: 5px;
-  font-size: 1.5rem;
+  .todo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    padding: 1rem .5rem;
+    margin: .5rem .1rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+  }
 }
 
-.todo:nth-of-type(even) {
+.todo:nth-of-type(even){
   background: #ddd;
 }
 
-.todo:nth-of-type(odd) {
+.todo:nth-of-type(odd){
   background: #fff;
 }
 
@@ -82,6 +86,7 @@
 
 .checktodo {
   font-size: 1.5rem;
+  
   padding: 1rem;
   border-radius: 50%;
 }
