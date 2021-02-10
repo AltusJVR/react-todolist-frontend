@@ -52,19 +52,23 @@ function App() {
 
   return (
     <div className="App container">
-      <h1>React Todolist App</h1>
-      <div className="input-container">
-        <input
-          autoFocus="true"
-          id="todo-input"
-          type="text"
-          value={todo}
-          onChange={({ target }) => setTodo(target.value)}
-        />
-        <button id="todo-submit" type="submit" onClick={(createTodo)}>
-          <FontAwesomeIcon icon={faPlus} />
-        </button>
-      </div>
+      <header>
+        <h1>React Todolist App</h1>
+        <div className="input-container">
+
+          <input
+            autoFocus="true"
+            id="todo-input"
+            type="text"
+            value={todo}
+            onChange={({ target }) => setTodo(target.value)}
+          />
+          <button id="todo-submit" type="submit" onClick={(createTodo)}>
+            <FontAwesomeIcon icon={faPlus} />
+          </button>
+        </div>
+      </header>
+
 
       <ul id="todos">
         {todos.map(({ _id, task, completed }, i) => (

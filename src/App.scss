@@ -8,26 +8,45 @@
 }
 // Utilities
 .container {
+  background: #444444;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin: 1rem auto;
+  justify-content: space-evenly;
+  // margin: 1rem auto;
+  height: 100vh;
+  
+}
+header {
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  color: #b5b5b5;
 }
 
 .input-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #ddd;
   margin: 2rem auto;
   padding: 1rem;
   border: 1px solid rgba(0, 0, 0, .5);
   border-radius: 5px;
+  width: 40%;
 }
 
 #todo-input, #todo-input:focus {
-  height: 1.5rem;
-  line-height: 3;
+  height: 2rem;
+  line-height: 2rem;
   outline: none;
   margin-right: 1rem;
   font-weight: 600;
+  font-size: 1rem;
+  padding: 5px;
+  width: 80%;
 }
 
 #todo-submit{
@@ -43,7 +62,8 @@
 
 .completed {
   color: rgba(2, 140, 2, 0.453);
- 
+  text-decoration: line-through;
+  
 }
 .unfinished {
   color: rgba(155, 0, 0, .8);
@@ -64,7 +84,7 @@
     justify-content: space-between;
     align-items: center;
     font-weight: 600;
-    padding: 1rem .5rem;
+    padding: 0 .5rem;
     margin: .5rem .1rem;
     border-radius: 5px;
     font-size: 1.5rem;
@@ -72,7 +92,7 @@
 }
 
 .todo:nth-of-type(even){
-  background: #ddd;
+  background: #aaa;
 }
 
 .todo:nth-of-type(odd){
@@ -86,7 +106,31 @@
 
 .checktodo {
   font-size: 1.5rem;
-  
-  padding: 1rem;
   border-radius: 50%;
+}
+
+@media(max-width:700px){
+  #todos {
+    width: 90%;
+    margin: 2rem auto;
+    .todo {
+
+      font-weight: 600;
+      padding: 0 .5rem;
+      margin: .5rem .1rem;
+      border-radius: 5px;
+      font-size: 1.5rem;
+    }
+  }
+  .input-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #ddd;
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, .5);
+    border-radius: 5px;
+    width: 80%;
+  }
 }
